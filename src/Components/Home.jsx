@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import Services from "./Services";
 import "./Home.css";
 import heroimage from "../assets/hero-image.png";
 import aboutus from "../assets/about-1.png";
@@ -22,7 +23,7 @@ function Home() {
         </div>
         <img className="home-hero-image" src={heroimage} alt="hero image" />
       </div>
-      <section id="about" className="home-about-div">
+      <section id="/about" className="home-about-div">
         <div className="about-hero-image-div">
           <img className="about-hero-image" src={aboutus} alt="about image" />
         </div>
@@ -45,7 +46,8 @@ function Home() {
             <button className="home-about-btn">Talk To Us</button>
           </Link>
         </div>
-      </section>
+          </section>
+          <Services />
     </div>
   );
 }
