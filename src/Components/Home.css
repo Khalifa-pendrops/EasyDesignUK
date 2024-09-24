@@ -210,13 +210,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 40%;
+    /* look out here..*/
 }
 
 .about-hero-image {
     width: 90%;
     height: 40%;
-    width: 100%;
     position: relative;
     animation: moveLeftRight 10s ease-in-out infinite;
 }
@@ -377,15 +377,16 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 8px 0px var(--bs-gray);
     transition: 0.5s;
-    
+
 }
 
 .web-dev-div:hover,
 .ui-ux-div:hover,
 .mobile-dev-div:hover,
 .design-div:hover {
-    background-color: rgb(250, 241, 237);
     transform: translate(1);
+    background: var(--bs-primary) !important;
+    color: var(--bs-white);
 }
 
 .icon-div {
@@ -424,4 +425,92 @@ body {
 .design-div p {
     color: var(--bs-gray);
     font-size: .9rem;
+}
+
+
+/* FEATURES SECTION STARTS HERE */
+.features-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0e0e0;
+    height: 100vh;
+}
+
+.feature-div-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 40%;
+}
+
+.toggle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.toggle-header-keyed {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    /* padding: 1rem; */
+    border-radius: 5px;
+    cursor: pointer;
+    /* border: 1px solid #ccc; */
+    width: 100%;
+    position: relative;
+}
+
+.h5-header {
+    margin: 0;
+    color: #bf8417;
+    font-size: 1rem;
+}
+
+.toggle-header-icon {
+    font-size: 1.2rem;
+}
+
+.dropdown-div {
+    padding: 1rem .8rem;
+    border-radius: 5px;
+    border-radius: 1px solid #ccc;
+
+}
+
+.dropdown-head-text {
+    margin-bottom: .2rem;
+    font-size: 1.2rem;
+    padding: 0 .2rem;
+    color: #343536;
+}
+
+.dropdown-p-texts {
+    color: var(--bs-gray-dark);
+    font-size: .9rem;
+    line-height: 1.8;
+    padding: 0 .2rem 0 .2rem;
+}
+
+.dropdown-p-texts-li {
+    color: var(--bs-gray-dark);
+    font-size: .9rem;
+    line-height: 1.6;
+    padding: 0 0 0 3rem;
+}
+
+.labe-text-bold{
+    font-weight: 600;
+    color: #6c757d;
 }

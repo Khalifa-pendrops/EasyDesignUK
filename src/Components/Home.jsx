@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Services from "./Services";
+import Features from "./Features";
 import "./Home.css";
 import heroimage from "../assets/hero-image.png";
 import aboutus from "../assets/about-1.png";
@@ -48,6 +49,7 @@ function Home() {
         </div>
           </section>
           <Services />
+          <Features />
     </div>
   );
 }
