@@ -6,17 +6,30 @@ import aboutus from "../assets/about-1.png";
 
 function Features() {
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
+  const [isActive, setIsActive] = useState(null);
 
   const toggleDropdown = (index) => {
     setOpenDropdownIndex(index === openDropdownIndex ? null : index);
+  };
+
+  const handleClick = (index) => {
+    setIsActive(index === isActive ? index : false);
+  };
+
+  const handleFocus = (index) => {
+    setIsActive(index === isActive ? "true" : "false");
+  };
+
+  const handleBlur = (index) => {
+    setIsActive(index === isActive ? "true" : "false");
   };
 
   const divsData = [
     {
       title: "Why choose Easy Design UK's Web Development Services?",
       contentTitle: "We provide high-performance, custom-tailored websites.",
-      contentDescription:
-        "At Easy Design UK, we focus on creating websites that not only look great but also function seamlessly. Our websites are designed with your business needs in mind, ensuring optimal performance, user experience, and scalability. We use the latest technologies to build sites that help you stand out in the digital landscape. <br></br> <br></br> Our expert team of developers and designers work collaboratively to bring your vision to life, ensuring the final product is tailored to your brand and audience.",
+      contentDescription: `At Easy Design UK, we focus on creating websites that not only look great but also function seamlessly. Our websites are designed with your business needs in mind, ensuring optimal performance, user experience, and scalability. We use the latest technologies to build sites that help you stand out in the digital landscape. 
+    Our expert team of developers and designers work collaboratively to bring your vision to life, ensuring the final product is tailored to your brand and audience.`,
     },
     {
       title: "Are there any hidden costs in your services?",
@@ -64,8 +77,8 @@ function Features() {
       title: "What sets your services apart from others?",
       contentTitle:
         "Innovation, customization, and dedication to client success.",
-      contentDescription:
-        "Easy Design UK stands out due to our commitment to innovation and attention to detail. Whether it's web development, branding, or social media management, we offer personalized solutions designed to meet your specific needs. Our approach combines cutting-edge technology, creative design, and a deep understanding of user behavior to help your business thrive in the digital world. We don’t just offer services; we build partnerships to ensure your long-term success online.",
+      contentDescription: `Easy Design UK stands out due to our commitment to innovation and attention to detail. Whether it's web development, branding, or social media management, we offer personalized solutions designed to meet your specific needs. Our approach combines cutting-edge technology, creative design, and a deep understanding of user behavior to help your business thrive in the digital world. 
+        We don’t just offer services; we build partnerships to ensure your long- term success online.`,
     },
   ];
 
@@ -74,15 +87,33 @@ function Features() {
       <section id="/features" className="features-section">
         <div className="feature-div-left">
           {divsData.map((div, index) => (
-            <div key={index} className="toggle-header-keyed">
+            <div
+              key={index}
+              className="toggle-header-keyed"
+              onClick={() => handleClick(index)}
+              onFocus={() => handleFocus(index)}
+              onBlur={() => handleBlur(index)}
+              style={{
+                boxShadow: isActive ? "0px 0px 0px 2px #bf8417" : "none",
+              }}
+            >
               <div
                 className="toggle-header"
                 onClick={() => toggleDropdown(index)}
+                // onClick={handleClick}
+                onFocus={() => handleFocus(index)}
+                onBlur={() => handleBlur(index)}
+                style={{
+                  backgroundColor: isActive ? "rgb(254, 254, 193)" : "none",
+                }}
               >
                 <p className="h5-header">{div.title}</p>
                 <span className="toggle-header-icon">
                   {openDropdownIndex === index ? (
-                    <FontAwesomeIcon icon={faAngleDown} />
+                    <FontAwesomeIcon
+                      className="colored-arrow"
+                      icon={faAngleDown}
+                    />
                   ) : (
                     <FontAwesomeIcon icon={faAngleUp} />
                   )}
@@ -99,7 +130,10 @@ function Features() {
                       <ul className="dropdown-p-texts-li">
                         {div.contentDescription.listItems.map((item, idx) => (
                           <li key={idx}>
-                            <span className="labe-text-bold">{item.label}:</span> {item.description}
+                            <span className="labe-text-bold">
+                              {item.label}:
+                            </span>{" "}
+                            {item.description}
                           </li>
                         ))}
                       </ul>
@@ -113,7 +147,7 @@ function Features() {
           ))}
         </div>
         <div className="about-hero-image-div">
-          <img className="about-hero-image" src={aboutus} alt="about image" />
+          <img className="about-hero-image features-image" src={aboutus} alt="about image" />
         </div>
       </section>
     </div>

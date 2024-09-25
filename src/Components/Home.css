@@ -218,7 +218,42 @@ body {
     width: 90%;
     height: 40%;
     position: relative;
-    animation: moveLeftRight 10s ease-in-out infinite;
+}
+
+.about-hero-image-div {
+    animation: slideInDownAndMoveLeftRight 10s ease-in-out forwards;
+}
+
+@keyframes slideInDownAndMoveLeftRight {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh) translateX(0);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(0) translateX(10%);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes slideInDown2 {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes moveLeftRight {
@@ -241,6 +276,7 @@ body {
     justify-content: center;
     width: 48%;
     gap: 1rem;
+    animation: slideInDown 1s ease-out forwards;
 }
 
 .home-about-right p {
@@ -329,6 +365,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    animation: slideInDown 1s ease-out forwards;
 }
 
 .home-service-head h4 {
@@ -350,6 +387,7 @@ body {
     text-align: center;
     width: 62rem;
     font-weight: 500;
+
 }
 
 .services-container {
@@ -377,7 +415,49 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 8px 0px var(--bs-gray);
     transition: 0.5s;
+    animation: slideInDown 1s ease-out forwards;
+    transform: translateY(100vh);
+    opacity: 0;
+}
 
+.web-dev-div:nth-child(1),
+.ui-ux-div:nth-child(1),
+.mobile-dev-div:nth-child(1),
+.design-div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.web-dev-div:nth-child(2),
+.ui-ux-div:nth-child(2),
+.mobile-dev-div:nth-child(2),
+.design-div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.web-dev-div:nth-child(3),
+.ui-ux-div:nth-child(3),
+.mobile-dev-div:nth-child(3),
+.design-div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.web-dev-div:nth-child(4),
+.ui-ux-div:nth-child(4),
+.mobile-dev-div:nth-child(4),
+.design-div:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .web-dev-div:hover,
@@ -433,8 +513,47 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #e0e0e0;
+    background: #d8c0ff;
     height: 100vh;
+    position: relative;
+}
+
+@keyframes slideInFromLeft2 {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, 100%);
+        left: -620px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+        left: 60px;
+    }
+}
+
+@keyframes slideInFromRight2 {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+        right: -1220px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        right: -20%;
+    }
+}
+
+@keyframes slowMove {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(60px);
+    }
 }
 
 .feature-div-left {
@@ -444,6 +563,20 @@ body {
     align-items: flex-start;
     gap: 1rem;
     width: 40%;
+    left: -620px;
+    animation: slideInFromLeft2 1s forwards;
+
+}
+
+.features-image {
+    right: -1420px;
+    animation: slideInFromRight2 1s forwards, slowMove 5s 1s infinite alternate ease-in-out;
+}
+
+.feature-div-left,
+.features-image {
+    transform: translateY(-50%);
+    opacity: 0;
 }
 
 .toggle-header {
@@ -464,18 +597,18 @@ body {
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
-    /* padding: 1rem; */
     border-radius: 5px;
     cursor: pointer;
-    /* border: 1px solid #ccc; */
     width: 100%;
-    position: relative;
+    transition: 'box-shadow 0.3s ease',
 }
+
 
 .h5-header {
     margin: 0;
     color: #bf8417;
     font-size: 1rem;
+    font-weight: 500;
 }
 
 .toggle-header-icon {
@@ -501,6 +634,7 @@ body {
     font-size: .9rem;
     line-height: 1.8;
     padding: 0 .2rem 0 .2rem;
+    white-space: pre-line !important;
 }
 
 .dropdown-p-texts-li {
@@ -510,7 +644,135 @@ body {
     padding: 0 0 0 3rem;
 }
 
-.labe-text-bold{
+.labe-text-bold {
     font-weight: 600;
     color: #6c757d;
+}
+
+.colored-arrow {
+    color: #bf8417;
+}
+
+/*PRICING COMPONENT STARTS HERE*/
+.pricing-parent-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 2rem;
+}
+
+.pricing-top-div h4 {
+    font-size: 1.5rem;
+    color: #bf8417;
+    font-weight: 600;
+}
+
+.pricing-top-div h1 {
+    font-size: 2.5rem;
+    color: #343536;
+    font-weight: 600;
+}
+
+.pricing-top-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+}
+
+.pricing-top-div p {
+    width: 61rem;
+    text-align: center;
+    color: var(--bs-gray);
+}
+
+
+.pricing-bottom-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #dcd9e2;
+    border-radius: 5px;
+    padding-bottom: 1rem;
+}
+
+.pricing-card:hover {
+    background-color: var(--bs-white);
+    box-shadow: 0px 0px 10px 10px var(--bs-light);
+}
+
+.pricing-card-top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px solid white;
+    padding: .6rem;
+}
+
+.pricing-card-top h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.pricing-card-top h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.pricing-card-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: .6rem 3rem;
+}
+
+.pricing-card-bottom p {
+    display: flex;
+    gap: .6rem;
+    font-weight: 600;
+}
+
+.pricing-card-purple2 {
+    color: #bf8417;
+}
+
+.pricing-card-purple {
+    color: #6711f2;
+}
+
+.check-icon {
+    color: green;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.pricing-btn {
+    padding: .8rem 2rem;
+    border-radius: 45px;
+    background-color: #ffffff;
+    color: #bf8417;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pricing-btn:hover {
+    background-color: #bf8417;
+    color: #ffffff;
 }
