@@ -48,6 +48,8 @@ const Services = lazy(() => import("./Services"));
 const About = lazy(() => import("./About"));
 const Features = lazy(() => import("./Features"));
 const Pricing = lazy(() => import("./Pricing"));
+const ContactUs = lazy(() => import("./ContactUs"));
+const Footer = lazy(() => import("./Footer"));
 
 function Home() {
   return (
@@ -81,8 +83,14 @@ function Home() {
       <Suspense fallback={<div>Loading Features...</div>}>
         <Features />
       </Suspense>
-      <Suspense fallback={<div>Loading Features...</div>}>
+      <Suspense fallback={<div>Loading Pricing...</div>}>
         <Pricing />
+      </Suspense>
+      <Suspense fallback={<div>Loading Contact-us...</div>}>
+        <ContactUs />
+      </Suspense>
+      <Suspense fallback={<div>Loading Contact-us...</div>}>
+        <Footer />
       </Suspense>
     </div>
   );

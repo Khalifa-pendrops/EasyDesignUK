@@ -7,7 +7,7 @@ import "./Home.css";
 function Pricing() {
   return (
     <div>
-      <section id="/pricing" className="pricing-parent-container">
+      <section id="#pricing" className="pricing-parent-container">
         <div className="pricing-top-div">
           <h4>Pricing Plan</h4>
           <h1>Not Sure Which Plan Is For You?</h1>
@@ -25,6 +25,7 @@ function Pricing() {
             <div className="pricing-card-top">
               <h3>Basic</h3>
               <h2>
+                <span className="pound-span-1">&pound;</span>
                 Starting from <br /> 500
               </h2>
             </div>
@@ -63,8 +64,14 @@ function Pricing() {
 
           <div className="pricing-card">
             <div className="pricing-card-top">
+              {/* <div className="badge-main-div"> */}
+              <div className="price-badge">
+                <span>Popular</span>
+              </div>
+              {/* </div> */}
               <h3 className="pricing-card-purple2">Standard</h3>
               <h2 className="pricing-card-purple2">
+                <span className="pound-span-2">&pound;</span>
                 Starting from <br /> 1,500
               </h2>
             </div>
@@ -84,6 +91,10 @@ function Pricing() {
               <p>
                 <FontAwesomeIcon className="check-icon" icon={faCheck} />
                 SEO Optimization
+              </p>
+              <p>
+                <FontAwesomeIcon className="check-icon" icon={faCheck} />
+                Social Media Management
               </p>
               <p>
                 <FontAwesomeIcon className="check-icon" icon={faCheck} />
@@ -108,6 +119,7 @@ function Pricing() {
             <div className="pricing-card-top">
               <h3 className="pricing-card-purple">Premium</h3>
               <h2 className="pricing-card-purple">
+                <span className="pound-span-3">&pound;</span>
                 Starting from <br /> 3,000
               </h2>
             </div>

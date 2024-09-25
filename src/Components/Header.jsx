@@ -26,7 +26,7 @@ function Header() {
   return (
     <div>
       <header className={`head-main-div ${scrolled ? "scrolled" : " "}`}>
-        <a href="/">
+        <a href="#home">
           <img src={logo} alt="logo" width="60px" />
         </a>
         <nav className="head-nav">
@@ -34,20 +34,17 @@ function Header() {
             <a href="#home">Home</a>
           </li>
           <li>
-            {" "}
             <a href="#about">About</a>
           </li>
           <li>
-            {" "}
             <a href="#services">Services</a>
           </li>
           <li>
-            {" "}
             <a href="#pricing">Pricing</a>
           </li>
-          <Link to="/contact-us" className="links">
+          <a href="#contact-us" className="links">
             <li>Contact Us</li>
-          </Link>
+          </a>
         </nav>
       </header>
     </div>
