@@ -43,13 +43,14 @@ import Header from "./Header";
 import "./Home.css";
 import heroimage from "../assets/hero-image.png";
 
-// Lazy load the components
 const Services = lazy(() => import("./Services"));
 const About = lazy(() => import("./About"));
 const Features = lazy(() => import("./Features"));
 const Pricing = lazy(() => import("./Pricing"));
 const ContactUs = lazy(() => import("./ContactUs"));
 const Footer = lazy(() => import("./Footer"));
+const RoutedContactPage = lazy(() => import("./RoutedContactPage"));
+
 
 function Home() {
   return (
@@ -71,7 +72,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Wrap components with Suspense and provide a fallback UI */}
+   
       <Suspense fallback={<div>Loading About...</div>}>
         <About />
       </Suspense>
@@ -91,6 +92,9 @@ function Home() {
       </Suspense>
       <Suspense fallback={<div>Loading Contact-us...</div>}>
         <Footer />
+      </Suspense>
+      <Suspense fallback={<div>Loading Contact-us...</div>}>
+        <RoutedContactPage />
       </Suspense>
     </div>
   );

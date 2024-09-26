@@ -1,27 +1,27 @@
-import React, {useState, useEffect} from "react";
-import { Link } from 'react-router-dom'
-import logo from '../assets/logo.png';
-import './Home.css';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+import "./Home.css";
 
 function Header() {
-    const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    const handleScroll = () => {
-        if (window.scrollY > 50) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    //this is the setup for the event listener on mount component
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      //this will remove event listener when the component unmounts
+      window.removeEventListener("scroll", handleScroll);
     };
-    
-    useEffect(() => { //this is the setup for the event listener on mount component
-        window.addEventListener("scroll", handleScroll);
-            return () => { //this will remove event listener when the component unmounts
-              window.removeEventListener("scroll", handleScroll);
-            };
-    }, []);
-
-
+  }, []);
 
   return (
     <div>
@@ -42,9 +42,9 @@ function Header() {
           <li>
             <a href="#pricing">Pricing</a>
           </li>
-          <a href="#contact-us" className="links">
+          <Link top="/routedcontact" className="links">
             <li>Contact Us</li>
-          </a>
+          </Link>
         </nav>
       </header>
     </div>

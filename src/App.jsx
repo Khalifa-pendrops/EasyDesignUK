@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
-import About from "./Components/About";
-import Services from "./Components/Services";
-import Features from "./Components/Features";
+// import RoutedContactPage from "./Components/RoutedContactPage";
+// import Location from "./Components/Location";
+// import Features from "./Components/Features";
 import ScrollToTop from "./Components/ScrollToTop";
 
 
@@ -12,9 +12,9 @@ function App() {
     <>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/features" element={<Features />} /> */}
+          {/* <Route path="/location" element={<Location />} />  */}
+          {/* <Route path="/routedcontact" element={<RoutedContactPage />} /> */}
+          {/* <Route path="/features" element={<Features />} /> */}
         </Routes>
       <ScrollToTop />
     </>

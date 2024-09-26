@@ -5,7 +5,7 @@ import {
   faPhone,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-// import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function ContactUs() {
   return (
@@ -58,14 +58,14 @@ function ContactUs() {
               Birmingham, United Kingdom
             </p>
           </div>
-          {/* <div className="social-media">
+          <div className="social-media">
             <a href="">
               <FontAwesomeIcon className="social-icons" icon={faFacebook} />
             </a>
             <a href="">
               <FontAwesomeIcon className="social-icons" icon={faInstagram} />
             </a>
-          </div> */}
+          </div>
         </div>
       </section>
     </div>
