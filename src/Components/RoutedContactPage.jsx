@@ -11,6 +11,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Location from "./Location";
+import ContactUs from "./ContactUs";
+import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 
 function RoutedContactPage() {
@@ -68,13 +70,17 @@ function RoutedContactPage() {
                   />
 
                   <div className="div-like-input">
-                    <p>
-                      Your Project <span>Choose a service</span>
-                      <FontAwesomeIcon
-                        className="angle-icon"
-                        icon={faAngleDown}
-                      />
-                    </p>
+                    <label>
+                      Your Project <br></br>
+                      <span>Choose a service</span>
+                                      </label>
+                                      {/* <select id="services" >
+                                          <option value="disabled">Choose a service</option>
+                                      </select> */}
+                    <FontAwesomeIcon
+                      className="angle-icon positioned-icon"
+                      icon={faAngleDown}
+                    />
                   </div>
                 </div>
                 <input type="text" name="text" placeholder="Subject" required />
@@ -87,7 +93,9 @@ function RoutedContactPage() {
                   className="routed-contact-btn"
                   type="submit"
                   value="Submit"
-                ></button>
+                >
+                  Send Message
+                </button>
               </form>
             </div>
             <div className="form-right">
@@ -114,7 +122,10 @@ function RoutedContactPage() {
               </div>
 
               <div className="form-right-item">
-                <FontAwesomeIcon className="contact-icons" icon={faEnvelope} />
+                <FontAwesomeIcon
+                  className="routed-contact-icon"
+                  icon={faEnvelope}
+                />
                 <div className="right-item">
                   <p>Address</p>
                   <span>Birmingham, United Kingdom</span>
@@ -124,25 +135,30 @@ function RoutedContactPage() {
               <div className="row-icons">
                 <a href="">
                   <FontAwesomeIcon
-                    className="contact-social-icons"
+                    className="routed-contact-icon"
                     icon={faTurnUp}
                   />
                 </a>
                 <a href="">
-                  <FontAwesomeIcon className="social-icons" icon={faFacebook} />
+                  <FontAwesomeIcon
+                    className="routed-social-icons"
+                    icon={faFacebook}
+                  />
                 </a>
                 <a href="">
                   <FontAwesomeIcon
-                    className="social-icons"
+                    className="routed-social-icons"
                     icon={faInstagram}
                   />
                 </a>
               </div>
             </div>
           </div>
-              </div>
-              <Location />
+        </div>
+        <Location />
       </div>
+      <ContactUs />
+      <Footer />
       <ScrollToTop />
     </div>
   );

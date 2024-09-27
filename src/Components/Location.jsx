@@ -5,14 +5,13 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-import ContactUs from "./ContactUs";
-import Footer from "./Footer";
+
 
 const containerStyle = {
   width: "90%",
-  height: "50vh",
+  height: "70vh",
   display: "flex",
-  margin: "0 auto",
+  margin: "3rem auto",
 };
 
 const center = {
@@ -70,9 +69,6 @@ function Location() {
           </InfoWindow>
         )}
       </GoogleMap>
-      <br></br> <br></br> <br></br> <br></br>
-      <ContactUs />
-      <Footer />
     </LoadScript>
   );
 }
