@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCode,
@@ -34,7 +35,9 @@ function Services() {
               We build responsive and dynamic websites that deliver a seamless
               user experience across all devices.
             </p>
-            <button className="services-btn">Contact Us</button>
+            <Link to="/routedcontact">
+              <button className="services-btn">Contact Us</button>
+            </Link>
           </div>
 
           <div className="ui-ux-div">
@@ -46,7 +49,9 @@ function Services() {
               Creating visually appealing and intuitive designs to enhance user
               interaction and engagement on your website.
             </p>
-            <button className="services-btn">Contact Us</button>
+            <Link to="/routedcontact">
+              <button className="services-btn">Contact Us</button>
+            </Link>
           </div>
 
           <div className="mobile-dev-div">
@@ -58,7 +63,9 @@ function Services() {
               Developing mobile applications that offer a robust and engaging
               user experience on both iOS and Android platforms.
             </p>
-            <button className="services-btn">Contact Us</button>
+            <Link to="/routedcontact">
+              <button className="services-btn">Contact Us</button>
+            </Link>
           </div>
 
           <div className="design-div">
@@ -70,7 +77,9 @@ function Services() {
               Mobile-first designs that look great on any device, ensuring a
               seamless experience across platforms.
             </p>
-            <button className="services-btn">Contact Us</button>
+            <Link to="/routedcontact">
+              <button className="services-btn">Contact Us</button>
+            </Link>
           </div>
         </div>
 
@@ -84,7 +93,9 @@ function Services() {
               Optimizing your website to improve search engine rankings and
               increase organic traffic to your site.
             </p>
-            <button className="services-btn">Contact Us</button>
+            <Link to="/routedcontact">
+              <button className="services-btn">Contact Us</button>
+            </Link>
           </div>
 
           <div className="ui-ux-div">
@@ -96,7 +107,9 @@ function Services() {
               Implementing effective digital marketing strategies to increase
               your online visibility and drive conversions.
             </p>
-            <button className="services-btn">Contact Us</button>
+            <Link to="/routedcontact">
+              <button className="services-btn">Contact Us</button>
+            </Link>
           </div>
 
           <div className="mobile-dev-div">
@@ -108,7 +121,9 @@ function Services() {
               Providing reliable hosting services and ongoing maintenance to
               ensure your website runs smoothly.
             </p>
-            <button className="services-btn">Contact Us</button>
+            <Link to="/routedcontact">
+              <button className="services-btn">Contact Us</button>
+            </Link>
           </div>
 
           <div className="design-div">
@@ -120,7 +135,9 @@ function Services() {
               Websites optimized for speed and SEO, ensuring fast load times and
               top search engine rankings.
             </p>
-            <button className="services-btn">Contact Us</button>
+            <Link to="/routedcontact">
+              <button className="services-btn">Contact Us</button>
+            </Link>
           </div>
         </div>
       </section>

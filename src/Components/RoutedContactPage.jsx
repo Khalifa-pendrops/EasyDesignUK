@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,6 +16,38 @@ import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 
 function RoutedContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [selectedService, setSelectedServices] = useState(" ");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add your API call here or any other backend logic here to send the form data to your server.
+    console.log("Form Data Submitted:", formData);
+
+    // This logic must reset form after submittion
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  };
+
+  const handleChange = (e) => {
+    setSelectedServices(e.target.value);
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    //   setFormData({...formData, [e.target.name]: e.target.value });
+  };
+
   return (
     <div>
       <Header />
@@ -50,12 +82,16 @@ function RoutedContactPage() {
                   <input
                     type="text"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Your Name"
                     required
                   />
                   <input
                     type="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Your Email"
                     required
                   />
@@ -63,29 +99,37 @@ function RoutedContactPage() {
 
                 <div className="input-row">
                   <input
-                    type="number"
+                    type="phone"
                     name="phoneNumber"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="Your Phone"
                     required
                   />
-
-                  <div className="div-like-input">
-                    <label>
-                      Your Project <br></br>
-                      <span>Choose a service</span>
-                                      </label>
-                                      {/* <select id="services" >
-                                          <option value="disabled">Choose a service</option>
-                                      </select> */}
-                    <FontAwesomeIcon
-                      className="angle-icon positioned-icon"
-                      icon={faAngleDown}
-                    />
-                  </div>
+                  <label>
+                    Your Project <br></br>
+                  </label>
+                  <select id="services" onClick={handleChange}>
+                    <option
+                      className="disabled-colored-select"
+                      value="disabled"
+                    >
+                      Choose a service
+                    </option>
+                    <option value="branding">Business Branding</option>
+                    <option value="graphics">Graphics Design</option>
+                    <option value="social-media">
+                      Social Media Management
+                    </option>
+                    <option value="video-editing">Video Editing</option>
+                    <option value="web-dev">Web and App Development</option>
+                  </select>
                 </div>
                 <input type="text" name="text" placeholder="Subject" required />
                 <textarea
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Message"
                   required
                 ></textarea>
@@ -93,6 +137,7 @@ function RoutedContactPage() {
                   className="routed-contact-btn"
                   type="submit"
                   value="Submit"
+                  onSubmit={handleSubmit}
                 >
                   Send Message
                 </button>

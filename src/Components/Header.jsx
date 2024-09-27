@@ -30,21 +30,26 @@ function Header() {
           <img src={logo} alt="logo" width="60px" />
         </a>
         <nav className="head-nav">
-          <li className="home-nav-list">
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#services">Services</a>
-          </li>
-          <li>
-            <a href="#pricing">Pricing</a>
-          </li>
-          <Link top="/routedcontact" className="links">
-            <li>Contact Us</li>
-          </Link>
+          <ul>
+            {" "}
+            <li className="home-nav-list">
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#pricing">Pricing</a>
+            </li>
+            <li>
+              <Link top="/routedcontact" className="links">
+                Contact Us
+              </Link>
+            </li>
+          </ul>
         </nav>
       </header>
     </div>

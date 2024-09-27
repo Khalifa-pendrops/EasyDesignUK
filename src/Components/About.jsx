@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 import aboutus from "../assets/about-1.png";
 import "./Home.css";
@@ -25,7 +25,7 @@ function About() {
             complex web applications, our expertise covers all aspects of
             digital design and development.
           </p>
-          <Link to="/about">
+          <Link to="/routedcontact">
             <button className="home-about-btn">Talk To Us</button>
           </Link>
         </div>
@@ -34,4 +34,4 @@ function About() {
   );
 }
 
-export default About
+export default About;

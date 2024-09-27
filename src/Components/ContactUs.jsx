@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -8,6 +8,16 @@ import {
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function ContactUs() {
+  const [formState, setFormState] = useState({
+    email: "",
+  });
+
+  const handleChange = (event) => {
+    event.preventDefault(event.target.value);
+    setFormState({ ...formState, [event.target.email]: event.target.value });
+  };
+
+
   return (
     <div>
       <section id="/contact-us" className="contact-us-div">
@@ -37,8 +47,8 @@ function ContactUs() {
         <div className="newsletter-div">
           <h4>Newsletter</h4>
           <form>
-            <label>Subscribe to our newsletter</label>
-            <input className="contact-input-field" type="email" placeholder="Enter your email" />
+            <label className="contact-us-label">Subscribe to our newsletter</label>
+            <input className="contact-input-field" type="email" name="email" value={FormData.email} placeholder="Enter your email" onChange={handleChange} />
             <button className="contact-btn" type="submit">Subscribe</button>
           </form>
         </div>
