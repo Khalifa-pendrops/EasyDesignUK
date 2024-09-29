@@ -18,6 +18,14 @@ function HomeHero() {
             </Link>
           </div>
           <img className="home-hero-image" src={heroimage} alt="hero image" />
+          <div className="row">
+            <div className="circle large-circle"></div>
+            <div className="circle medium-circle"></div>
+            <div className="circle small-circle"></div>
+            <div className="triangle first-triangle"></div>
+            <div className="triangle additional-triangle"></div>
+            <div className="heart"></div>
+          </div>
         </div>
       </section>
     </div>
@@ -25,3 +33,4 @@ function HomeHero() {
 }
 
 export default HomeHero
+

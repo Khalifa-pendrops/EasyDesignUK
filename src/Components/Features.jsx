@@ -28,7 +28,7 @@ function Features() {
     {
       title: "Why choose Easy Design UK's Web Development Services?",
       contentTitle: "We provide high-performance, custom-tailored websites.",
-      contentDescription: `At Easy Design UK, we focus on creating websites that not only look great but also function seamlessly. Our websites are designed with your business needs in mind, ensuring optimal performance, user experience, and scalability. We use the latest technologies to build sites that help you stand out in the digital landscape. 
+      contentDescription: `At Easy Design UK, we focus on creating websites that not only look great but also function seamlessly. Our websites are designed with your business needs in mind, ensuring optimal performance, user experience, and scalability. We use the latest technologies to build sites that help you stand out in the digital landscape.
     Our expert team of developers and designers work collaboratively to bring your vision to life, ensuring the final product is tailored to your brand and audience.`,
     },
     {
@@ -77,7 +77,7 @@ function Features() {
       title: "What sets your services apart from others?",
       contentTitle:
         "Innovation, customization, and dedication to client success.",
-      contentDescription: `Easy Design UK stands out due to our commitment to innovation and attention to detail. Whether it's web development, branding, or social media management, we offer personalized solutions designed to meet your specific needs. Our approach combines cutting-edge technology, creative design, and a deep understanding of user behavior to help your business thrive in the digital world. 
+      contentDescription: `Easy Design UK stands out due to our commitment to innovation and attention to detail. Whether it's web development, branding, or social media management, we offer personalized solutions designed to meet your specific needs. Our approach combines cutting-edge technology, creative design, and a deep understanding of user behavior to help your business thrive in the digital world.
         We don’t just offer services; we build partnerships to ensure your long- term success online.`,
     },
   ];
@@ -155,3 +155,4 @@ function Features() {
 }
 
 export default Features;
+

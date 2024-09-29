@@ -58,7 +58,9 @@ function Pricing() {
                 <FontAwesomeIcon className="check-icon" icon={faXmark} />
                 Video Editing
               </p>
-              <button className="pricing-btn">Request a Quote</button>
+              <Link to="/routedcontact">
+                <button className="pricing-btn">Request a Quote</button>
+              </Link>
             </div>
           </div>
 
@@ -112,7 +114,9 @@ function Pricing() {
                 <FontAwesomeIcon className="check-icon" icon={faXmark} />
                 Advanced Customizations
               </p>
-              <button className="pricing-btn">Request a Quote</button>
+              <Link to="/routedcontact">
+                <button className="pricing-btn">Request a Quote</button>
+              </Link>
             </div>
           </div>
           <div className="pricing-card">
@@ -160,7 +164,9 @@ function Pricing() {
                 <FontAwesomeIcon className="check-icon" icon={faCheck} />
                 Role-based Access
               </p>
-              <button className="pricing-btn">Request a Quote</button>
+              <Link to="/routedcontact">
+                <button className="pricing-btn">Request a Quote</button>
+              </Link>
             </div>
           </div>
         </div>

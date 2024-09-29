@@ -1,0 +1,269 @@
+/* html, body{
+    width: 90vw;
+    height: 90vh;
+} */
+
+/* Container with Flexbox */
+.row {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    /* Ensure this is set to contain absolutely positioned elements */
+}
+
+/* General Circle Style */
+.circle {
+    position: absolute;
+    /* Make circles independent */
+    background: radial-gradient(circle, white 59%, rgb(246, 226, 230) 60%);
+    /* background: pink; */
+    border-radius: 50%;
+}
+
+/* Large Circle */
+.large-circle {
+    background: radial-gradient(circle, white 59%, rgb(222, 235, 227) 60%);
+    width: 300px;
+    height: 300px;
+    animation: moveFreelyLargeCircle 35s infinite linear;
+}
+
+/* Medium Circle */
+.medium-circle {
+    width: 250px;
+    height: 250px;
+    animation: moveFreelyMediumCircle 40s infinite linear;
+}
+
+/* Small Circle */
+.small-circle {
+    width: 150px;
+    /* New smaller circle */
+    height: 150px;
+    /* New smaller circle */
+    animation: moveFreelySmallCircle 30s infinite linear;
+    /* Animation for the smaller circle */
+}
+
+/* General Triangle Style */
+.triangle {
+    position: absolute;
+    /* Make triangles independent */
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 60px solid pink;
+}
+
+/* First Triangle */
+.first-triangle {
+    border-bottom: 80px solid rgb(233, 233, 203);
+    animation: moveFreelyFirstTriangle 38s infinite linear, oscillateFirstTriangle 5s infinite alternate;
+    /* Add oscillation */
+}
+
+/* Additional Triangle */
+.additional-triangle {
+    border-bottom: 80px solid rgb(233, 233, 203);
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    animation: moveFreelyAdditionalTriangle 45s infinite linear;
+}
+
+/* Heart Shape */
+.heart {
+    /* display: none; */
+    width: 700px;
+    /* Increase width */
+    height: 660px;
+    /* Increase height */
+    border-radius: 100px 100px 100px 100px;
+    position: absolute;
+    /* Ensure heart is not fixed */
+    background: rgb(222, 235, 227);
+    transform: rotate(-45deg);
+    animation: moveFreelyHeart 50s infinite linear;
+}
+
+/* Heart before and after pseudo-elements for rounded tops */
+.heart::before,
+.heart::after {
+    content: "";
+    width: 700px;
+    /* Increase width */
+    height: 660px;
+    /* Increase height */
+    border-radius: 50%;
+    background: rgb(222, 235, 227);
+    position: absolute;
+}
+
+.heart::before {
+    top: -180px;
+    /* Adjust position */
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 200px;
+    /* Adjust position */
+}
+
+/* Keyframes for Large Circle Movement */
+@keyframes moveFreelyLargeCircle {
+    0% {
+        transform: translate(0, 10vh);
+    }
+
+    25% {
+        transform: translate(20vw, 30vh);
+    }
+
+    50% {
+        transform: translate(40vw, -10vh);
+    }
+
+    75% {
+        transform: translate(70vw, 50vh);
+    }
+
+    100% {
+        transform: translate(100vw, 20vh);
+    }
+}
+
+/* Keyframes for Medium Circle Movement */
+@keyframes moveFreelyMediumCircle {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-30vw, 20vh);
+    }
+
+    50% {
+        transform: translate(-50vw, -30vh);
+    }
+
+    75% {
+        transform: translate(80vw, -10vh);
+    }
+
+    100% {
+        transform: translate(0, -20vh);
+    }
+}
+
+/* Keyframes for Small Circle Movement */
+@keyframes moveFreelySmallCircle {
+    0% {
+        transform: translate(0, 30vh);
+    }
+
+    25% {
+        transform: translate(20vw, 50vh);
+    }
+
+    50% {
+        transform: translate(-30vw, 20vh);
+    }
+
+    75% {
+        transform: translate(50vw, -10vh);
+    }
+
+    100% {
+        transform: translate(0, 30vh);
+    }
+}
+
+/* Keyframes for First Triangle Movement */
+@keyframes moveFreelyFirstTriangle {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(30vw, -20vh) rotate(45deg);
+    }
+
+    50% {
+        transform: translate(60vw, 20vh) rotate(-45deg);
+    }
+
+    75% {
+        transform: translate(20vw, -30vh) rotate(30deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+/* Keyframes for Additional Triangle Movement */
+@keyframes moveFreelyAdditionalTriangle {
+    0% {
+        transform: translate(0, 20vh) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-20vw, -30vh) rotate(60deg);
+    }
+
+    50% {
+        transform: translate(50vw, 30vh) rotate(-30deg);
+    }
+
+    75% {
+        transform: translate(-80vw, 40vh) rotate(45deg);
+    }
+
+    100% {
+        transform: translate(0, 20vh) rotate(0deg);
+    }
+}
+
+/* Keyframes for Heart Movement */
+@keyframes moveFreelyHeart {
+    0% {
+        transform: translate(50vw, 0);
+    }
+
+    25% {
+        transform: translate(60vw, -10vh);
+    }
+
+    50% {
+        transform: translate(80vw, 20vh);
+    }
+
+    75% {
+        transform: translate(70vw, -30vh);
+    }
+
+    100% {
+        transform: translate(50vw, 0);
+    }
+}
+
+/* Keyframes for First Triangle Oscillation */
+@keyframes oscillateFirstTriangle {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-10vw, 0) rotate(0deg);
+    }
+
+    /* Oscillation effect */
+}

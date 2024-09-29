@@ -18,7 +18,7 @@ function About() {
             high-performance websites and digital solutions tailored to your
             business needs. With a team of skilled developers and designers, we
             are committed to delivering innovative and effective web development
-            services that help you stand out in the digital world. <br></br>{" "}
+            services that help you stand out in the digital world. <br></br>
             <br></br>Our approach is simple yet effective: we listen to your
             goals, understand your audience, and deliver a product that not only
             looks great but also drives results. From bespoke websites to
