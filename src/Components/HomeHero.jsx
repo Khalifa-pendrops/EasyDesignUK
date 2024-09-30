@@ -5,7 +5,7 @@ import heroimage from "../assets/hero-image.png";
 function HomeHero() {
   return (
     <div>
-      <section id="/home">
+      <section id="home">
         <div className="home-hero-section">
           <div className="hero-left">
             <h1>Transform Your Online Presence</h1>

@@ -25,7 +25,7 @@ function Services() {
         transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
       }}
     >
-      <section id="/services" className="services-section">
+      <section id="services" className="services-section">
         <div className="home-service-head">
           <h4>Our Services</h4>
           <h1>What We Can Do For You</h1>

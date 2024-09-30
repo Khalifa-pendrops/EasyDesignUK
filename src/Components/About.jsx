@@ -17,7 +17,7 @@ function About() {
         transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
       }}
     >
-      <section id="/about" className="home-about-div">
+      <section id="about" className="home-about-div">
         <div className="about-hero-image-div">
           <img className="about-hero-image" src={aboutus} alt="about image" />
         </div>

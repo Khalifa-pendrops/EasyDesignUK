@@ -5,6 +5,7 @@ import "./Home.css";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -13,6 +14,10 @@ function Header() {
       setScrolled(false);
     }
   };
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  }
 
   useEffect(() => {
     //this is the setup for the event listener on mount component
@@ -29,9 +34,13 @@ function Header() {
         <a href="#home">
           <img src={logo} alt="logo" width="60px" />
         </a>
-        <nav className="head-nav">
+        <div className="hamburger" onClick={toggleMenu}>
+          <span className={`bar ${isOpen ? "open" : ""}`}></span>
+          <span className={`bar ${isOpen ? "open" : ""}`}></span>
+          <span className={`bar ${isOpen ? "open" : ""}`}></span>
+        </div>
+        <nav className={`head-nav ${isOpen ? "active" : ""}`}>
           <ul>
-            {" "}
             <li className="home-nav-list">
               <a href="#home">Home</a>
             </li>
@@ -57,4 +66,5 @@ function Header() {
 }
 
 export default Header;
+
 

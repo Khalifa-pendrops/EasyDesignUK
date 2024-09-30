@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import RoutedContactPage from "./Components/RoutedContactPage";
 import ScrollToTop from "./Components/ScrollToTop";
@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/routedcontact" element={<RoutedContactPage />} />
+        {/* <Route path="/" element={<ScrollToTop />} /> */}
       </Routes>
-      {/* <Test /> */}
       <ScrollToTop />
     </>
   );

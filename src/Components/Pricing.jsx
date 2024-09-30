@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useRef } from "react";
+import useOnScreen from "./ScreenLoadSetup";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
 
 function Pricing() {
+  const ref = useRef();
+  const isVisible = useOnScreen(ref, "0px");
   return (
-    <div>
-      <section id="#pricing" className="pricing-parent-container">
+    <div
+      ref={ref}
+      style={{
+        minHeight: "100vh",
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(100px)",
+        transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+      }}
+    >
+      <section id="pricing" className="pricing-parent-container">
         <div className="pricing-top-div">
           <h4>Pricing Plan</h4>
           <h1>Not Sure Which Plan Is For You?</h1>

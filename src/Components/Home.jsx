@@ -21,11 +21,9 @@ const Home = () => {
       <Suspense fallback={<div>Loading About...</div>}>
         <About />
       </Suspense>
-
       <Suspense fallback={<div>Loading Services...</div>}>
         <Services />
       </Suspense>
-
       <Suspense fallback={<div>Loading Features...</div>}>
         <Features />
       </Suspense>

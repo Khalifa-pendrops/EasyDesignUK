@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import useOnScreen from "./ScreenLoadSetup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
 import aboutus from "../assets/about-1.png";
 
 function Features() {
+  const ref = useRef();
+  const isVisible = useOnScreen(ref, "0px");
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
   const [isActive, setIsActive] = useState(null);
 
@@ -83,8 +86,16 @@ function Features() {
   ];
 
   return (
-    <div>
-      <section id="/features" className="features-section">
+    <div
+      ref={ref}
+      style={{
+        minHeight: "100vh",
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(100px)",
+        transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+      }}
+    >
+      <section id="features" className="features-section">
         <div className="feature-div-left">
           {divsData.map((div, index) => (
             <div
@@ -147,7 +158,11 @@ function Features() {
           ))}
         </div>
         <div className="about-hero-image-div">
-          <img className="about-hero-image features-image" src={aboutus} alt="about image" />
+          <img
+            className="about-hero-image features-image"
+            src={aboutus}
+            alt="about image"
+          />
         </div>
       </section>
     </div>
@@ -155,4 +170,3 @@ function Features() {
 }
 
 export default Features;
-

@@ -26,10 +26,8 @@ function RoutedContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your API call here or any other backend logic here to send the form data to your server.
+    // i will add API call here or any other backend logic here to send the form data to your server.
     console.log("Form Data Submitted:", formData);
-
-    // This logic must reset form after submittion
     setFormData({
       name: "",
       email: "",
@@ -45,7 +43,6 @@ function RoutedContactPage() {
       ...prevData,
       [name]: value,
     }));
-    //   setFormData({...formData, [e.target.name]: e.target.value });
   };
 
   return (
