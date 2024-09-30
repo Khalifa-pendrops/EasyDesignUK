@@ -471,7 +471,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 6rem;
-    height: 80vh;
+    height: 100%;
     padding: 0 6rem;
 }
 
@@ -479,64 +479,53 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 50%;
+    position: relative;
+    height: 50vh;
+    /* border: 1px solid; */
+    /* overflow: hidden; */
     /* look out here..*/
+
 }
 
 .about-hero-image {
-    width: 90%;
-    height: 40%;
+    width: 100%;
+    height: 100%;
     position: absolute;
-        bottom: -100px;
-        /* Start just below the viewport */
-        left: 0;
-        /* width: 100px; */
-        /* Adjust image size as needed */
-        opacity: 0;
-        /* Start fully transparent */
-        animation: moveUp 3s forwards, moveSideways 20s infinite alternate;
-}
-
-.about-hero-image-div {
-position: relative;
-    height: 100vh;
-    /* Full viewport height */
-    overflow: hidden;
-    /*THIS NEEDS TO BE WORKED ON!!!*/
+    bottom: -100px;
+    left: 0;
+    top: 5%;
+    /* opacity: 0; */
+    /* animation: moveUp 20s ease-in-out forwards, slideLeftRight 5s ease-in-out infinite; */
+    animation: slideInDown 100s ease-out forwards, slideLeftRight 10s ease-in-out infinite;
 }
 
 @keyframes moveUp {
     0% {
         bottom: -100px;
-        /* Start below the view */
-        opacity: 0;
-        /* Fully transparent */
+        opacity: 1;
+        transform: translateY(100vh);
     }
 
     100% {
         bottom: 50%;
-        /* Adjust based on desired stop position */
         opacity: 1;
-        /* Fully opaque */
+        transform: translateY(0);
     }
 }
 
-@keyframes moveSideways {
-    0% {
-        left: 0;
-        /* Start position */
+@keyframes slideLeftRight {
+
+    0%,
+    100% {
+        transform: translateX(0);
     }
 
     50% {
-        left: calc(100% - 100px);
-        /* Move to the right edge */
-    }
-
-    100% {
-        left: 0;
-        /* Return to the start */
+        transform: translateX(100px);
     }
 }
+
 
 .home-about-right {
     display: flex;

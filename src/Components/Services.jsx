@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import useOnScreen from "./ScreenLoadSetup";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,8 +13,18 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Services() {
+    const ref = useRef();
+    const isVisible = useOnScreen(ref, "-100px");
   return (
-    <div>
+    <div
+      ref={ref}
+      style={{
+        minHeight: "100vh",
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(100px)",
+        transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+      }}
+    >
       <section id="/services" className="services-section">
         <div className="home-service-head">
           <h4>Our Services</h4>

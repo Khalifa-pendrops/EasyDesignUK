@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
+import useOnScreen from "./ScreenLoadSetup";
 import { Link } from "react-router-dom";
 import aboutus from "../assets/about-1.png";
 import "./Home.css";
 
 function About() {
+  const ref = useRef();
+  const isVisible = useOnScreen(ref, "0px");
   return (
-    <div>
+    <div
+      ref={ref}
+      style={{
+        minHeight: "100vh",
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(100px)",
+        transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+      }}
+    >
       <section id="/about" className="home-about-div">
         <div className="about-hero-image-div">
           <img className="about-hero-image" src={aboutus} alt="about image" />
