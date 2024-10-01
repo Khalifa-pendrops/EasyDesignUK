@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import Header from "./Header";
 import "./Home.css";
+import "./HomeResponsive.css";
 
 const HomeHero = lazy(() => import("./HomeHero"));
 const About = lazy(() => import("./About"));

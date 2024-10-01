@@ -24,6 +24,9 @@ function About() {
         <div className="home-about-right">
           <h4>About Us</h4>
           <h1> Crafting Digital Experiences for Your Success</h1>
+          <div className="about-hero-image-div show-image">
+            <img className="about-hero-image" src={aboutus} alt="about image" />
+          </div>
           <p>
             At Easy Design UK, we specialize in creating stunning,
             high-performance websites and digital solutions tailored to your

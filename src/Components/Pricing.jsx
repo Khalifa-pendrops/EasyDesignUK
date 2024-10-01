@@ -78,7 +78,7 @@ function Pricing() {
           <div className="pricing-card">
             <div className="pricing-card-top">
               {/* <div className="badge-main-div"> */}
-              <div className="price-badge">
+              <div className="price-badge mobile-badge">
                 <span>Popular</span>
               </div>
               {/* </div> */}

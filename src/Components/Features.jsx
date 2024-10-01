@@ -157,7 +157,7 @@ function Features() {
             </div>
           ))}
         </div>
-        <div className="about-hero-image-div">
+        <div className="about-hero-image-div show-image">
           <img
             className="about-hero-image features-image"
             src={aboutus}

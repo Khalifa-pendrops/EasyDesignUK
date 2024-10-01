@@ -933,6 +933,13 @@ body {
     font-weight: 500;
 }
 
+.toggle-header:focus {
+    border: 2px solid #bf8417;
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(202, 160, 8, 0.25);
+    background-color: yellow;
+}
+
 .toggle-header-icon {
     font-size: 1.2rem;
 }
@@ -1131,7 +1138,7 @@ body {
 }
 
 /*CONTACT-US SECTION STARTS HERE!*/
-/*Be careful here when woring for responsiveness*/
+/*Be careful here when working for responsiveness*/
 .contact-us-div {
     display: flex;
     justify-content: center;
@@ -1489,87 +1496,3 @@ form textarea {
     background-color: #ffffff;
     color: #bf8417;
 }
-
-
-/* MEDIA QUERY FOR RESPONSIVESNESS STARTS HERE!*/
-/*1. HEADER COMPONENT*/
-
-/* Tablet Screens (min-width: 481px and max-width: 768px) */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .head-main-div {
-        padding: 10px 15px;
-    }
-
-    .head-nav ul {
-        gap: 15px;
-    }
-
-    .head-nav ul li a {
-        font-size: 14px;
-    }
-}
-
-
-@media screen and (max-width: 480px) {
-    .head-main-div {
-        max-width: 480px;
-        width: 50%;
-        align-items: flex-start;
-        padding: 10px 20px;
-    }
-
-    .head-nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .head-nav ul li {
-        margin: 5px 0;
-    }
-
-    .head-nav ul li a {
-        font-size: 12px;
-    }
-
-    .head-main-div img {
-        width: 40px;
-    }
-}
-
-
-/* Mobile Screens (max-width: 480px) */
-@media screen and (max-width: 480px) {
-    .head-nav {
-        position: absolute;
-        top: 0%;
-        right: 0;
-        margin-top: 4rem;
-        width: 100%;
-        background-color: rgb(252, 252, 252);
-        padding: 20px;
-        display: none;
-        flex-direction: column;
-        border-top: 1px solid rgb(205, 205, 205);
-    }
-
-    .head-nav.active {
-        display: flex;
-        /* margin-bottom: 4rem; */
-        /*watch this!*/
-    }
-
-    .head-nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: .2rem;
-    }
-
-    .head-nav ul li a {
-        font-size: 12px;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
-

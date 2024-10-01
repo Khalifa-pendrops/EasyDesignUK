@@ -1,0 +1,841 @@
+/* MEDIA QUERY FOR RESPONSIVESNESS STARTS HERE!*/
+/*1. HEADER COMPONENT*/
+
+/* Tablet Screens (min-width: 481px and max-width: 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .head-main-div {
+        padding: 10px 15px;
+    }
+
+    .head-nav ul {
+        gap: 15px;
+    }
+
+    .head-nav ul li a {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .head-main-div {
+        max-width: 480px;
+        width: 100%;
+        align-items: flex-start;
+        padding: 10px 20px;
+        border: 1px solid;
+    }
+
+    .head-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .head-nav ul li {
+        margin: 5px 0;
+    }
+
+    .head-nav ul li a {
+        font-size: 12px;
+    }
+
+    .head-main-div img {
+        width: 40px;
+    }
+}
+
+
+/* Mobile Screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .head-nav {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        margin-top: 4rem;
+        width: 100%;
+        background-color: rgb(252, 252, 252);
+        padding: 20px;
+        display: none;
+        flex-direction: column;
+        border-top: 1px solid rgb(205, 205, 205);
+    }
+
+    .head-nav.active {
+        display: flex;
+        /* margin-bottom: 4rem; */
+        /*watch this!*/
+    }
+
+    .head-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .2rem;
+    }
+
+    .head-nav ul li a {
+        font-size: 12px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* HOME HERO SECTION*/
+@media (max-width: 480px) {
+    .home-hero-section {
+        width: 100% !important;
+        flex-direction: column;
+        height: 100% !important;
+        padding: 0 1rem;
+        gap: 2rem;
+        border: 1px solid red;
+        margin-top: 6rem !important;
+        overflow-x: hidden !important;
+    }
+
+    .home-hero-image {
+        width: 24rem;
+        animation: slideInFromRight 1.5s ease-out forwards;
+    }
+
+    .hero-left {
+        width: fit-content;
+    }
+
+    .hero-left h1 {
+        font-size: 2rem;
+        width: 18rem;
+    }
+
+    .hero-left p {
+        width: 14rem;
+        font-size: 1rem;
+        word-spacing: 0.5rem;
+        line-height: 1.6;
+    }
+
+    .home-hero-btn {
+        padding: 0.8rem 4.8rem;
+        font-size: 1rem;
+    }
+
+    .circle,
+    .triangle,
+    .heart {
+        display: none;
+    }
+}
+
+@media (min-width:481px) and (max-width: 768px) {
+    .home-hero-section {
+        flex-direction: column;
+        padding: 0 2rem;
+        gap: 1.5rem;
+    }
+
+    .home-hero-image {
+        width: 80%;
+        animation: slideInFromRight 1.5s ease-out forwards;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-left h1 {
+        font-size: 3rem;
+    }
+
+    .hero-left p {
+        width: 100%;
+        font-size: 1.2rem;
+        word-spacing: 0.3rem;
+    }
+
+    .home-hero-btn {
+        padding: 0.9rem 3rem;
+        font-size: 1.1rem;
+    }
+
+    .circle,
+    .triangle,
+    .heart {
+        display: block !important;
+    }
+}
+
+/*ABOUT COMPONENT*/
+@media (max-width: 480px) {
+    .home-about-div {
+        flex-direction: column;
+        padding: 0 1rem;
+        border: none;
+        margin-top: 2rem;
+        border: 1px solid blue;
+    }
+
+    .about-hero-image-div {
+        width: 30%;
+        height: 30vh;
+        display: none !important;
+        /* Adjusted height for mobile */
+    }
+
+    .show-image {
+        display: block !important;
+        width: 24rem;
+        height: 30vh;
+        margin: 1.6rem 0;
+        animation: slideInDown 20s ease forwards, slideLeftRight2 10s ease infinite;
+    }
+
+    @keyframes slideLeftRight2 {
+
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(-20px);
+        }
+    }
+
+    .home-about-right {
+        width: 30rem;
+        gap: .1rem;
+        animation: slideInDown 1s ease-out forwards;
+        border: 1px solid;
+        padding-left: 2rem;
+    }
+
+    .home-about-right h1 {
+        font-size: 2rem;
+        width: 22rem;
+    }
+
+    .home-about-right h4 {
+        font-size: 1.5rem;
+    }
+
+    .home-about-right p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        width: 20rem;
+    }
+
+    .home-about-btn {
+        padding: 0.8rem 3rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .home-about-div {
+        flex-direction: column;
+        padding: 0 2rem;
+        gap: 4rem;
+        border: none;
+    }
+
+    .about-hero-image-div {
+        width: 100%;
+        height: 40vh;
+        /* Adjusted height for tablet */
+    }
+
+    .home-about-right {
+        width: 100%;
+        gap: 1.5rem;
+        animation: slideInDown 1s ease-out forwards;
+    }
+
+    .home-about-right h1 {
+        font-size: 2.5rem;
+        /* Smaller font size */
+        width: auto;
+    }
+
+    .home-about-right h4 {
+        font-size: 1.6rem;
+        /* Smaller font size */
+    }
+
+    .home-about-right p {
+        font-size: 1rem;
+        /* Adjusted font size */
+        line-height: 1.7;
+        /* Adjust line-height */
+    }
+
+    .home-about-btn {
+        padding: 0.9rem 2.5rem;
+        /* Adjusted button padding */
+        font-size: 1rem;
+        /* Adjusted font size */
+    }
+
+    .about-hero-image {
+        animation: slideInDown 70s ease-out forwards, slideLeftRight 10s ease-in-out infinite;
+        /* Adjusted animation duration */
+    }
+}
+
+/*SCROLL TO TOP COMPONENT*/
+@media (max-width: 480px) {
+    .scroll-to-top {
+        bottom: 20px;
+        right: 40px;
+    }
+
+    .scroll-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        line-height: 50px;
+    }
+
+    .scroll-icon {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 30px;
+        /* Adjusted bottom spacing */
+        right: 25px;
+        /* Adjusted right spacing */
+    }
+
+    .scroll-btn {
+        width: 55px;
+        /* Slightly smaller button size */
+        height: 55px;
+        /* Slightly smaller button size */
+        font-size: 22px;
+        /* Reduced font size */
+        line-height: 55px;
+        /* Centering icon */
+    }
+
+    .scroll-icon {
+        font-size: 0.9rem;
+        /* Smaller icon size */
+    }
+}
+
+
+/*SERVICES COMPONENT*/
+@media (max-width: 480px) {
+    .services-section {
+        padding: 0 1rem;
+        margin-top: 2rem;
+        border: 1px solid blue;
+    }
+
+    .home-service-head {
+        gap: .1rem;
+        border: 1px solid;
+        width: 21rem;
+        text-align: center;
+    }
+
+    .home-service-head h4 {
+        font-size: 1.2rem;
+    }
+
+    .home-service-head h1 {
+        font-size: 1.8rem;
+        width: 100%;
+    }
+
+    .home-service-head p {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .services-container {
+        width: 30rem;
+        padding: 0 2rem;
+        flex-direction: column;
+        border: 1px solid;
+    }
+
+    .web-dev-div,
+    .ui-ux-div,
+    .mobile-dev-div,
+    .design-div {
+        width: 80%;
+        padding: 1.5rem 5rem;
+        border-radius: 10px;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .icon-div {
+        padding: 1.5rem;
+    }
+
+    .icon {
+        font-size: 3rem;
+    }
+
+    .services-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .web-dev-div h3,
+    .ui-ux-div h3,
+    .mobile-dev-div h3,
+    .design-div h3 {
+        font-size: 1.2rem;
+        width: 18rem !important;
+    }
+
+    .web-dev-div p,
+    .ui-ux-div p,
+    .mobile-dev-div p,
+    .design-div p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .services-section {
+        padding: 0 2rem;
+        /* Consistent padding */
+    }
+
+    .home-service-head h4 {
+        font-size: 1.6rem;
+        /* Slightly smaller heading size */
+    }
+
+    .home-service-head h1 {
+        font-size: 2.8rem;
+        /* Slightly smaller heading size */
+        width: 90%;
+        /* Adjusted width on tablet */
+    }
+
+    .home-service-head p {
+        font-size: 1rem;
+        /* Keep the same paragraph size */
+        width: 90%;
+        /* Adjusted width on tablet */
+    }
+
+    .services-container {
+        padding: 0 4rem;
+        /* Reduced padding */
+        flex-direction: row;
+        /* Arrange services horizontally */
+        flex-wrap: wrap;
+        /* Allow wrapping */
+    }
+
+    .web-dev-div,
+    .ui-ux-div,
+    .mobile-dev-div,
+    .design-div {
+        width: calc(50% - 2rem);
+        /* Two columns with spacing */
+        padding: 1.8rem;
+        /* Slightly reduced padding */
+    }
+
+    .icon-div {
+        padding: 2rem;
+        /* Adjust padding */
+    }
+
+    .icon {
+        font-size: 3.5rem;
+        /* Slightly smaller icon size */
+    }
+
+    .services-btn {
+        padding: 0.7rem 1.8rem;
+        /* Adjust button padding */
+    }
+
+    .web-dev-div h3,
+    .ui-ux-div h3,
+    .mobile-dev-div h3,
+    .design-div h3 {
+        font-size: 1.4rem;
+        /* Slightly smaller heading size */
+    }
+
+    .web-dev-div p,
+    .ui-ux-div p,
+    .mobile-dev-div p,
+    .design-div p {
+        font-size: 0.9rem;
+        /* Keep the same paragraph size */
+    }
+}
+
+/*FEATURES COMPONENT*/
+@media (max-width: 480px) {
+    .features-section {
+        border: 1px solid blue !important;
+        width: 100%;
+        flex-direction: column;
+        height: 100% !important;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    .feature-div-left {
+        width: 30rem;
+        padding: 0 2rem;
+        left: 0;
+        animation: slideInFromLeft2 1s forwards;
+    }
+
+    .features-image {
+        width: 24rem;
+        height: 240px;
+        right: 0;
+        animation: slideInFromRight2 1s forwards, slowMove 5s infinite alternate ease-in-out;
+    }
+
+    .toggle-header {
+        padding: 0.8rem;
+    }
+
+    .h5-header {
+        font-size: 0.9rem;
+    }
+
+    .toggle-header-icon {
+        font-size: 1rem;
+    }
+
+    .dropdown-head-text {
+        font-size: 1rem;
+    }
+
+    .dropdown-p-texts,
+    .dropdown-p-texts-li {
+        font-size: 0.8rem;
+    }
+
+    .colored-arrow {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .features-section {
+        flex-direction: row;
+        /* Maintain row layout */
+        height: 100vh;
+        /* Keep full height */
+        padding: 2rem;
+        /* Adjust padding */
+    }
+
+    .feature-div-left {
+        width: 50%;
+        /* Adjust width for tablet */
+        left: -320px;
+        /* Reset position */
+        animation: slideInFromLeft2 1s forwards;
+        /* Keep animation */
+    }
+
+    .features-image {
+        width: 50%;
+        /* Adjust width for tablet */
+        right: -620px;
+        /* Reset position */
+        animation: slideInFromRight2 1s forwards, slowMove 5s 1s infinite alternate ease-in-out;
+        /* Keep animation */
+    }
+
+    .toggle-header {
+        padding: 1rem;
+        /* Keep padding */
+    }
+
+    .h5-header {
+        font-size: 1.2rem;
+        /* Adjust font size */
+    }
+
+    .toggle-header-icon {
+        font-size: 1.5rem;
+        /* Adjust icon size */
+    }
+
+    .dropdown-head-text {
+        font-size: 1.1rem;
+        /* Adjust font size */
+    }
+
+    .dropdown-p-texts,
+    .dropdown-p-texts-li {
+        font-size: 0.9rem;
+        /* Maintain font size */
+    }
+
+    .colored-arrow {
+        font-size: 1.5rem;
+        /* Adjust arrow size */
+    }
+}
+
+/*PRICING COMPONENT*/
+@media (max-width: 480px) {
+    .pricing-parent-container {
+        flex-direction: column;
+        /* Keep the column layout */
+        padding: 1rem;
+        /* Reduce padding */
+        gap: 1rem;
+        /* Reduce gap between items */
+        border: 1px solid blue;
+        /* Remove border for cleaner look */
+    }
+
+    .pricing-top-div {
+        width: 30rem;
+        text-align: center;
+        border: 1px solid;
+    }
+
+    .pricing-top-div h4 {
+        font-size: 1.4rem;
+
+        /* Smaller font size */
+    }
+
+    .pricing-top-div h1 {
+        font-size: 1.8rem;
+        width: 20rem;
+        /* Smaller font size */
+    }
+
+    .pricing-top-div p {
+        width: 20rem;
+        /* Full width for text */
+        font-size: 0.9rem;
+        line-height: 1.6;
+        /* Smaller font size for paragraph */
+    }
+
+    .pricing-bottom-div {
+        width: 30rem;
+        padding: 3rem;
+        flex-direction: column;
+        /* Stack buttons vertically */
+        align-items: center;
+        /* Center align buttons */
+        gap: 0.5rem;
+        /* Reduce gap between buttons */
+    }
+
+    .pricing-card {
+        width: 100%;
+        /* Full width on mobile */
+        padding: 1rem;
+        /* Add padding */
+    }
+
+    .price-badge,
+    .price-badge span {
+        display: none;
+    }
+
+    .mobile-badge {
+        display: block !important;
+        position: absolute;
+        top: -16px;
+        right: -16px;
+    }
+
+    .mobile-badge span {
+        display: block;
+        position: absolute;
+        top: -110px;
+        right: -6px;
+        font-size: 1.5rem;
+        color: #fff;
+        padding: 3px 5px;
+        border-radius: 50%;
+    }
+
+    .pricing-card-top h3 {
+        font-size: 1.5rem;
+    }
+
+    .pricing-card-top h2 {
+        font-size: 1.8rem;
+    }
+
+    .check-icon {
+        font-size: 1rem;
+    }
+
+    .pricing-btn {
+        padding: 0.6rem 4rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .pricing-parent-container {
+        padding: 1.5rem;
+        /* Adjust padding */
+        gap: 1.5rem;
+        /* Increase gap between items */
+    }
+
+    .pricing-top-div h4 {
+        font-size: 1.6rem;
+        /* Slightly smaller font size */
+    }
+
+    .pricing-top-div h1 {
+        font-size: 2.2rem;
+        /* Adjust font size */
+    }
+
+    .pricing-top-div p {
+        width: 80%;
+        /* Adjust width for tablet */
+        font-size: 1rem;
+        /* Keep font size for paragraph */
+    }
+
+    .pricing-bottom-div {
+        flex-direction: row;
+        /* Maintain horizontal layout */
+        gap: 1rem;
+        /* Keep gap */
+    }
+
+    .pricing-card {
+        width: 48%;
+        /* Set width to fit two cards per row */
+        padding: 1.2rem;
+        /* Add padding */
+    }
+
+    .pricing-card-top h3 {
+        font-size: 1.7rem;
+        /* Adjust heading size */
+    }
+
+    .pricing-card-top h2 {
+        font-size: 2rem;
+        /* Adjust heading size */
+    }
+
+    .check-icon {
+        font-size: 1.1rem;
+        /* Adjust icon size */
+    }
+
+    .pricing-btn {
+        padding: 0.7rem 1.8rem;
+        /* Adjust button padding */
+        font-size: 1rem;
+        /* Adjust font size */
+    }
+}
+
+/*CONTACT COMPONENT*/
+@media (max-width: 480px) {
+    .contact-us-div {
+        border: 1px solid blue;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    .navigate-div,
+    .newsletter-div,
+    .contact-info-div {
+        width: 28rem;
+        margin-right: 0;
+    }
+
+    .navigate-div h4,
+    .newsletter-div h4,
+    .contact-info-div h4 {
+        font-size: 1.2rem;
+    }
+
+    .contact-input-field {
+        width: 100%;
+        padding: .6rem;
+    }
+
+    .contact-btn {
+        width: 25%;
+        padding: .6rem;
+    }
+
+    .social-icons {
+        font-size: 1rem;
+        padding: .2rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .contact-us-div {
+        padding: 1.5rem;
+        /* Adjust padding */
+        gap: 3rem;
+        /* Increase gap between sections */
+    }
+
+    .navigate-div,
+    .newsletter-div,
+    .contact-info-div {
+        width: 30%;
+        /* Set width to fit three sections comfortably */
+    }
+
+    .navigate-div h4,
+    .newsletter-div h4,
+    .contact-info-div h4 {
+        font-size: 1.3rem;
+        /* Slightly smaller heading size */
+    }
+
+    .contact-input-field {
+        width: 80%;
+        /* Adjust width for tablet */
+    }
+
+    .contact-btn {
+        width: auto;
+        /* Auto width for button */
+        padding: .6rem 1.5rem;
+        /* Adjust padding */
+    }
+
+    .social-icons {
+        font-size: 1.1rem;
+        /* Slightly smaller icon size */
+        padding: .4rem;
+        /* Adjust padding */
+    }
+}
+
+/*FOOTER COMPONENT*/
+
+@media (max-width: 480px) {
+    .footer-copyright {
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
